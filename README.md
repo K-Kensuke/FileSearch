@@ -1,5 +1,5 @@
 #FileSearch
-Pythonを使ったファイルサーチ
+File search program using Python 2
 
 ##Auther
 Kensuke Kousaka（@kensuke_linx）
