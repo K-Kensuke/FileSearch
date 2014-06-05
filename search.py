@@ -11,8 +11,19 @@ __author__ = 'Kensuke Kousaka'
 import sys
 import os
 
+
 def main(argv):
-    print 'TEST'
+    if len(argv) < 3:
+        print 'Designate Arguments'
+        print 'python search.py WhereToFind FileName'
+        sys.exit(1)
+
+    print '---------- SEARCHING ----------'
+    for dpath,dnames,fnames in os.walk(argv[1]):
+        for fname in fnames:
+            if argv[2] in fname:
+                print dpath, ":", fname
+    print '---------- FINISHED ----------'
 
 if __name__ == '__main__':
     main(sys.argv)
